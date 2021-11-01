@@ -1,0 +1,29 @@
+$font-size: 40px;
+$color: white;
+$border-radius: 10px;
+$width: 125px;
+
+$my-colors: (
+        "first": #5BFF33,
+        "second": #33D1FF,
+        "third": #6C00FF,
+        "forth": #FF002E,
+        "fifth": #9BFF00
+);
+
+@each $index, $value in $my-colors {
+  .a-#{$index} {
+    background-color: $value;
+    text-decoration: none;
+    font-size: $font-size;
+    color: $color;
+    border-radius: $border-radius;
+    width: $width;
+    text-align: center;
+  }
+}
+
+div {
+  display: flex;
+  justify-content: space-evenly;
+}
